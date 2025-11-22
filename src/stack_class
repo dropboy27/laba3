@@ -1,0 +1,31 @@
+from src.errors import EmptyStackError
+
+
+class Stack():
+    def __init__(self):
+        self._st = []
+        self._min_st = []
+
+    def push(self, x: float) -> None:
+        self._st.append(x)
+        if not self._min_st or x <= self._min_st[-1]:
+            self._min_st.append(x)
+
+    def pop(self) -> float:
+        if not self._st:
+            raise EmptyStackError("pop from empty stack")
+        value = self._st.pop()
+        if value == self._min_st[-1]:
+            self._min_st.pop()
+        return value
+
+    def peek(self) -> float:
+        if not self._st:
+            raise EmptyStackError("peek from empty stack")
+        return self._st[-1]
+
+    def is_empty(self) -> bool:
+        return not self._st
+
+    def __len__(self) -> int:
+        return len(self._st)
