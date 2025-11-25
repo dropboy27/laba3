@@ -1,4 +1,4 @@
-from src.errors import EmptyStackError
+from src.exceptions import EmptyStackError
 
 
 class Stack():

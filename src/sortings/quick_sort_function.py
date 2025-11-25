@@ -1,3 +1,8 @@
+from additional_utils.should_swap_function import should_swap
+from typing import Any, Callable, TypeVar
+
+T = TypeVar('T')
+
 
 def quick_sort(a: list[int]) -> list[int]:
     if not a:
