@@ -21,7 +21,6 @@ def test_factorial_error(func):
 
 @pytest.mark.parametrize("func", [fibo, fibo_recursive])
 def test_fibo_valid(func):
-    # Проверяем последовательность: 0, 1, 1, 2, 3, 5, 8...
     assert func(0) == 0
     assert func(1) == 1
     assert func(2) == 1

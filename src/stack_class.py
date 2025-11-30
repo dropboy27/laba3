@@ -29,3 +29,8 @@ class Stack():
 
     def __len__(self) -> int:
         return len(self._st)
+
+    def min(self) -> float:
+        if not self._min_st:
+            raise EmptyStackError("min from empty stack")
+        return self._min_st[-1]

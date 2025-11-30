@@ -46,3 +46,33 @@ def test_min_stack_feature(stack):
     assert stack.pop() == 7
     assert stack.pop() == 3
     assert stack.pop() == 5
+
+
+def test_stack_min():
+    s = Stack()
+    s.push(5)
+    assert s.min() == 5
+
+    s.push(3)
+    assert s.min() == 3
+
+    s.push(7)
+    assert s.min() == 3
+
+    s.push(1)
+    assert s.min() == 1
+
+    s.pop()
+    assert s.min() == 3
+
+    s.pop()
+    assert s.min() == 3
+
+    s.pop()
+    assert s.min() == 5
+
+
+def test_stack_min_empty():
+    s = Stack()
+    with pytest.raises(EmptyStackError):
+        s.min()
