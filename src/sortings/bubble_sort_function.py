@@ -1,7 +1,5 @@
-from copy import deepcopy
 from typing import Any, Callable, TypeVar
-from src.exceptions import EmptyListError
-from additional_utils.should_swap_function import should_swap
+from src.additional_utils.should_swap_function import should_swap
 
 T = TypeVar('T')
 
@@ -9,7 +7,7 @@ T = TypeVar('T')
 def bubble_sort(a: list[int], key: Callable[[T], Any] | None = None, cmp: Callable[[T, T], int] | None = None) -> list[T]:
     result = a.copy()
     if not a:
-        raise EmptyListError
+        return []
     else:
         len_arr = len(result)
         for i in range(len_arr):

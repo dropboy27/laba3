@@ -1,5 +1,5 @@
 from copy import deepcopy
-from additional_utils.should_swap_function import should_swap
+from src.additional_utils.should_swap_function import should_swap
 from typing import Any, Callable, TypeVar
 
 T = TypeVar('T')
@@ -7,19 +7,35 @@ T = TypeVar('T')
 
 def counting_sort(a: list[T], key: Callable[[T], Any] | None = None,
                   cmp: Callable[[T, T], int] | None = None) -> list[T]:
-    result = a.copy()
-    min_a = min(a)
-    max_a = max(a)
-    count = [0] * (max_a-min_a+1)
+    if not a:
+        return []
 
-    for num in a:
-        count[num-min_a] += 1
+    if key is not None:
+        keyed_items = [(key(x), x) for x in a]
+        min_key = min(k for k, _ in keyed_items)
+        max_key = max(k for k, _ in keyed_items)
 
-    index = 0
-    for i in range(len(count)):
-        while count[i] > 0:
-            result[index] = i + min_a
-            index += 1
-            count[i] -= 1
+        range_keys = max_key - min_key + 1
+        buckets = [[] for _ in range(range_keys)]
 
-    return result
+        for k, item in keyed_items:
+            buckets[k - min_key].append(item)
+
+        result = []
+        for bucket in buckets:
+            result.extend(bucket)
+
+        return result
+    else:
+        min_a = min(a)
+        max_a = max(a)
+        count = [0] * (max_a - min_a + 1)
+
+        for num in a:
+            count[num - min_a] += 1
+
+        result = []
+        for i in range(len(count)):
+            result.extend([i + min_a] * count[i])
+
+        return result

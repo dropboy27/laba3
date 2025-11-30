@@ -1,7 +1,5 @@
-from additional_utils.should_swap_function import should_swap
 from typing import Any, Callable, TypeVar
-from copy import deepcopy
-from quick_sort_function import quick_sort
+from src.sortings.quick_sort_function import quick_sort
 T = TypeVar('T')
 
 
@@ -9,7 +7,7 @@ def bucket_sort(a: list[T], buckets: int | None = None, key: Callable[[T], Any] 
                 cmp: Callable[[T, T], int] | None = None) -> list[T]:
     len_a = len(a)
     if len_a <= 1:
-        return a.copy
+        return a.copy()
 
     if buckets == None:
         buckets = len_a
