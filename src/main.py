@@ -3,17 +3,17 @@ import time
 import random
 from copy import deepcopy
 from typing import List, Optional
-from src.sortings.quick_sort_function import quick_sort
-from src.sortings.bubble_sort_function import bubble_sort
-from src.sortings.heap_sort_function import heap_sort
-from src.sortings.counting_sort_function import counting_sort
-from src.sortings.radix_sort_function import radix_sort
-from src.sortings.bucket_sort_function import bucket_sort
-from src.math.factorial_function import factorial
-from src.math.factorial_recursive_function import factorial_recursive
-from src.math.fibo_function import fibo
-from src.math.fibo_recursive_function import fibo_recursive
-from src.stack_class import Stack
+from .sortings.quick_sort_function import quick_sort
+from .sortings.bubble_sort_function import bubble_sort
+from .sortings.heap_sort_function import heap_sort
+from .sortings.counting_sort_function import counting_sort
+from .sortings.radix_sort_function import radix_sort
+from .sortings.bucket_sort_function import bucket_sort
+from .math.factorial_function import factorial
+from .math.factorial_recursive_function import factorial_recursive
+from .math.fibo_function import fibo
+from .math.fibo_recursive_function import fibo_recursive
+from .stack_class import Stack
 
 app = typer.Typer()
 

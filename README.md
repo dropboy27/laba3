@@ -47,6 +47,7 @@
 ```
 
 laba3/
+├──leercode - задачи с литкода
 ├── src/
 │   ├── math/
 │   │   ├── factorial_function.py
@@ -65,12 +66,12 @@ laba3/
 │   │   ├── test_cases_generation.py
 │   │   ├── benchmarks.py
 │   ├── stack_class.py
+│   ├── main.py
 │   └── exceptions.py
 ├── tests/
 │   ├── test_math.py
 │   ├── test_sortings.py
 │   └── test_stack.py
-├── main.py
 ├── .gitignore
 └── README.md
 ```
