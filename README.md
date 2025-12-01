@@ -100,12 +100,12 @@ pip install -r requirements.txt
 ### CLI интерфейс
 
 #### Сортировка массива
-
+python -m src/main.py --help
 ```
 
-python cli.py sort 5 2 8 1 9
-python cli.py sort 5 2 8 1 9 --algo bubble
-python cli.py sort 5 2 8 1 9 --algo heap
+python -m src/main.py sort 5 2 8 1 9
+python -m src/main.py sort 5 2 8 1 9 --algo bubble
+python -m src/main.py sort 5 2 8 1 9 --algo heap
 
 ```
 
@@ -115,8 +115,8 @@ python cli.py sort 5 2 8 1 9 --algo heap
 
 ```
 
-python cli.py fact 5
-python cli.py fact 10 --recursive
+python -m src/main.py fact 5
+python -m src/main.py fact 10 --recursive
 
 ```
 
@@ -124,8 +124,8 @@ python cli.py fact 10 --recursive
 
 ```
 
-python cli.py fib 10
-python cli.py fib 15 --recursive
+python -m src/main.py fib 10
+python -m src/main.py fib 15 --recursive
 
 ```
 
@@ -133,7 +133,7 @@ python cli.py fib 15 --recursive
 
 ```
 
-python cli.py stack push:10 push:20 push:5 peek pop size
+python -m src/main.py stack push:10 push:20 push:5 peek pop size
 
 ```
 
