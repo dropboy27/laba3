@@ -77,6 +77,9 @@ laba3/
 ```
 
 ## Установка
+```
+git clone https://github.com/dropboy27/laba3.git
+```
 
 ### Требования
 
