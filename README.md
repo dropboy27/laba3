@@ -100,7 +100,9 @@ pip install -r requirements.txt
 ### CLI интерфейс
 
 #### Сортировка массива
+```
 python -m src/main.py --help
+```
 ```
 
 python -m src/main.py sort 5 2 8 1 9
